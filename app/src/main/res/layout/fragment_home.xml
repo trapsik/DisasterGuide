@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/main_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@drawable/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="재난 가이드"
+            android:paddingTop="5dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/swDisasterMode"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/civilDefenseShelter"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/cds"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/earthquakeShelter"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_cds"
+            app:layout_constraintTop_toBottomOf="@id/civilDefenseShelter"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_es"
+            android:text="민방위대피소"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/earthquakeShelter"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/earthquake"
+            android:background="#FFFFFF"
+            app:layout_constraintRight_toLeftOf="@id/emergencyHospital"
+            app:layout_constraintLeft_toRightOf="@id/civilDefenseShelter"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_es"
+            app:layout_constraintTop_toBottomOf="@id/earthquakeShelter"
+            app:layout_constraintRight_toLeftOf="@id/tv_eh"
+            app:layout_constraintLeft_toRightOf="@id/tv_cds"
+            android:text="지진대피소"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/emergencyHospital"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/hospital"
+            android:background="#FFFFFF"
+            app:layout_constraintLeft_toRightOf="@id/earthquakeShelter"
+            app:layout_constraintRight_toLeftOf="@id/emergencyMessage"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_eh"
+            app:layout_constraintTop_toBottomOf="@id/emergencyHospital"
+            app:layout_constraintLeft_toRightOf="@id/tv_es"
+            app:layout_constraintRight_toLeftOf="@id/tv_em"
+            android:text="응급의료센터"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/emergencyMessage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/em"
+            android:background="#FFFFFF"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/emergencyHospital"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_em"
+            app:layout_constraintTop_toBottomOf="@id/emergencyMessage"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_eh"
+            android:text="재난문자조회"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_homeFragmentCDS"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="284dp"
+            android:text="민방위대피소"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnDirectionCDS"/>
+
+        <Button
+            android:id="@+id/btnDirectionCDS"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="284dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="안내"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/tv_homeFragmentCDS"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:id="@+id/tv_nearestCDS"
+            android:text="text1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_homeFragmentCDS"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"/>
+
+
+        <TextView
+            android:id="@+id/tv_homeFragmentES"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="384dp"
+            android:text="지진대피소"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnDirectionES"/>
+        <Button
+            android:id="@+id/btnDirectionES"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="384dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="안내"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/tv_homeFragmentES"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:id="@+id/tv_nearestES"
+            android:text="text1"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_homeFragmentES"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tv_homeFragmentEH"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="484dp"
+            android:text="응급의료센터"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnDirectionEH"/>
+        <Button
+            android:id="@+id/btnDirectionEH"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="484dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="안내"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/tv_homeFragmentEH"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:id="@+id/tv_nearestEH"
+            android:text="text1"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_homeFragmentEH"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

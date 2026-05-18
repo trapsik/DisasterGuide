@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원 가입"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="3dp"
+        android:text="이름"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/join_name"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/edge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint=" 이름"
+        android:inputType="textPersonName"
+        android:text="" />
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/join_name"
+        android:text="아이디"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/join_id"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_id"
+        android:background="@drawable/edge"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint=" 아이디"
+        android:inputType="text"/>
+    <TextView
+        android:id="@+id/tv_pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/join_id"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="3dp"
+        android:text="비밀번호"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/join_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_pw"
+        android:background="@drawable/edge"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint=" 비밀번호"
+        android:inputType="textPassword"
+        android:text="" />
+    <TextView
+        android:id="@+id/tv_birthdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/join_pw"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="3dp"
+        android:text="생년월일"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/join_birthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_birthdate"
+        android:background="@drawable/edge"
+        android:layout_marginTop="5dp"
+        android:ems="11"
+        android:hint=" 생년월일(-포함)"
+        android:inputType="text"
+        android:text="" />
+    <TextView
+        android:id="@+id/tv_phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/join_birthDate"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="3dp"
+        android:text="전화번호"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/join_phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_phoneNumber"
+        android:background="@drawable/edge"
+        android:layout_marginTop="5dp"
+        android:ems="11"
+        android:hint=" 전화번호(-포함)"
+        android:inputType="phone"
+        android:text="" />
+    <Button
+        android:id ="@+id/btnJoin"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:text="enter"
+        android:background="@drawable/shape"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/join_phoneNumber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

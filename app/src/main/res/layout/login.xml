@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="110dp"
+        android:src="@drawable/logo"
+        />
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="재난 가이드"
+        android:textStyle="bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="25sp"
+        android:fontFamily="@font/fontstyle"
+        android:textColor="#000000"
+        />
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    <EditText
+        android:id="@+id/login_id"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edge"
+        android:hint="아이디를 입력해주세요"
+        android:padding="5dp"
+        android:textColorHint="#CACACA" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edge"
+        android:hint="비밀번호를 입력해주세요"
+        android:padding="5dp"
+        android:inputType="textPassword"
+        android:textColorHint="#CACACA" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:text="로그인"
+        android:background="@drawable/edge"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="18sp"
+        android:focusable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_findId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디 찾기"
+            android:textColor="#000000"
+            android:background="@drawable/edge_bottom"
+            android:gravity="center_horizontal|center_vertical"
+            android:textSize="10sp"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:id="@+id/tv_findPw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 찾기"
+            android:textColor="#000000"
+            android:background="@drawable/edge_bottom"
+            android:gravity="center_horizontal|center_vertical"
+            android:textSize="10sp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_join"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:text="회원가입"
+        android:background="@drawable/edge"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="18sp"/>
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/em_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="커뮤니티"
+        android:paddingTop="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/member_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="56dp"
+        android:text="회원 아이디"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/postWrittenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:text="시간"
+        android:textColor="#9C9C9C"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/member_id" />
+
+    <TextView
+        android:id="@+id/postWrittenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="4dp"
+        android:text="제목"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postWrittenTime"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/postWrittenContent"
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:text="글 내용"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postWrittenTitle" />
+    <View
+        android:layout_width="364dp"
+        android:layout_height="5dp"
+        android:background="#dedede"
+        app:layout_constraintTop_toBottomOf="@id/postWrittenContent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="5dp" />
+
+    <ListView
+        android:id="@+id/listComments"
+        android:layout_width="364dp"
+        android:layout_height="400dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="190dp"
+        android:divider="#dedede"
+        android:dividerHeight="1.00dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_listview_comment" />
+
+    <EditText
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtComment"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/edge"
+        android:hint="댓글을 입력하세요"
+        android:padding="5dp"
+        android:textColorHint="#CACACA"/>
+
+    <TextView
+        android:id="@+id/writeComment"
+        android:layout_width="50dp"
+        android:layout_height="33dp"
+        android:background="@drawable/edge"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="작성"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/edtComment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
